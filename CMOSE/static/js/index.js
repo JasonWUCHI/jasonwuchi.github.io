@@ -21,6 +21,21 @@ function setInterpolationImage(i) {
 
 
 $(document).ready(function() {
+    document.querySelectorAll('.youtube-player').forEach(function(player) {
+      player.addEventListener('click', function() {
+        var videoId = player.dataset.youtubeId;
+        var iframe = document.createElement('iframe');
+
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' +
+          encodeURIComponent(videoId) + '?autoplay=1&rel=0';
+        iframe.title = 'Supplementary video';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+
+        player.replaceWith(iframe);
+      }, { once: true });
+    });
+
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"

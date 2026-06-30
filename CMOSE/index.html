@@ -151,15 +151,20 @@
         <div class="column">
           <h2 class="title is-3">Supplementary video</h2>
           <div class="video-responsive">
-            <iframe
-              width="900"
-              height="562"
-              src="https://www.youtube.com/embed/zo8jGfex3gQ"
-              title="Supplementary video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <button
+              class="youtube-player"
+              type="button"
+              data-youtube-id="zo8jGfex3gQ"
+              aria-label="Play the supplementary video on YouTube"
+            >
+              <img
+                src="https://i.ytimg.com/vi/zo8jGfex3gQ/maxresdefault.jpg"
+                alt=""
+                loading="lazy"
+              >
+              <span class="youtube-play-button" aria-hidden="true"></span>
+              <span class="youtube-player-label">Play supplementary video</span>
+            </button>
           </div>
         </div>
       </div>
